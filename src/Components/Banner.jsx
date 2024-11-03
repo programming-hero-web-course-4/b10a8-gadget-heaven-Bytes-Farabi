@@ -17,13 +17,18 @@ const Banner = () => {
                     </button>
                 </div>
             </section>
-            <section className='absolute-section absolute -mt-36 mb-60'>
+            <section className='absolute-section absolute -mt-36 '>
                 <div className='border-2 border-white ml-[36vh] rounded-lg'>
                     <div className='w-[100%] mx-auto flex p-3'>
-                        <img src="/public/assets/banner.jpg" alt="banner" className='h-[35vh] w-full] rounded-lg mb-60'/>
+                        <img src="/public/assets/banner.jpg" alt="banner" className='h-[35vh] w-full] rounded-lg'/>
                     </div>
                 </div>
             </section>
+
+<div className='mt-60'>
+    <h1 className='lg:text-4xl font-semibold'>Explore Cutting-Edge Gadgets</h1>
+</div>
+
         </div>
     );
 };
