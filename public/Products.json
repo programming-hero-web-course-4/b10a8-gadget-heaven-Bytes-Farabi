@@ -1,0 +1,267 @@
+[
+    {
+        "product_id": 1,
+        "product_title": "Ultra Slim Laptop",
+        "product_image": "https://example.com/images/laptop1.jpg",
+        "category": "Laptops",
+        "price": 899.99,
+        "description": "A sleek and powerful laptop ideal for work and entertainment.",
+        "specification": [
+            "Intel i7 Processor",
+            "16GB RAM",
+            "512GB SSD",
+            "15.6-inch Full HD Display",
+            "10-hour Battery Life"
+        ],
+        "availability": true,
+        "rating": 4.5
+    },
+    {
+        "product_id": 2,
+        "product_title": "Smartphone XZ Pro",
+        "product_image": "https://example.com/images/phone1.jpg",
+        "category": "Phones",
+        "price": 699.99,
+        "description": "A high-end smartphone with excellent camera quality and performance.",
+        "specification": [
+            "6.5-inch OLED Display",
+            "128GB Storage",
+            "Triple Camera System",
+            "5G Connectivity",
+            "Fast Charging"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "product_id": 3,
+        "product_title": "Wireless Earbuds",
+        "product_image": "https://example.com/images/earbuds1.jpg",
+        "category": "Accessories",
+        "price": 49.99,
+        "description": "Compact and lightweight earbuds with high-quality sound and noise cancellation.",
+        "specification": [
+            "Bluetooth 5.2",
+            "10 Hours Battery Life",
+            "Water Resistant",
+            "Touch Controls"
+        ],
+        "availability": true,
+        "rating": 4.2
+    },
+    {
+        "product_id": 4,
+        "product_title": "Smart Watch Series 5",
+        "product_image": "https://example.com/images/watch1.jpg",
+        "category": "Smart Watches",
+        "price": 199.99,
+        "description": "A versatile smartwatch with fitness tracking, notifications, and heart-rate monitoring.",
+        "specification": [
+            "1.3-inch Display",
+            "Heart Rate Monitor",
+            "GPS Tracking",
+            "7-Day Battery Life",
+            "Water Resistant"
+        ],
+        "availability": false,
+        "rating": 4.6
+    },
+    {
+        "product_id": 5,
+        "product_title": "MacBook Air M1",
+        "product_image": "https://example.com/images/macbook1.jpg",
+        "category": "MacBook",
+        "price": 999.99,
+        "description": "Lightweight and powerful laptop with the new M1 chip for amazing performance.",
+        "specification": [
+            "Apple M1 Chip",
+            "8GB RAM",
+            "256GB SSD",
+            "13.3-inch Retina Display",
+            "18-hour Battery Life"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "product_id": 6,
+        "product_title": "iPhone 13",
+        "product_image": "https://example.com/images/iphone1.jpg",
+        "category": "Phones",
+        "price": 1099.99,
+        "description": "Apple's latest smartphone with advanced camera, high-resolution display, and powerful processor.",
+        "specification": [
+            "6.1-inch Super Retina XDR",
+            "128GB Storage",
+            "Dual Camera System",
+            "5G Connectivity",
+            "Ceramic Shield"
+        ],
+        "availability": true,
+        "rating": 4.9
+    },
+    {
+        "product_id": 7,
+        "product_title": "Gaming Laptop GT Pro",
+        "product_image": "https://example.com/images/laptop2.jpg",
+        "category": "Laptops",
+        "price": 1299.99,
+        "description": "High-performance gaming laptop with dedicated graphics and powerful processor.",
+        "specification": [
+            "Intel i9 Processor",
+            "32GB RAM",
+            "1TB SSD",
+            "NVIDIA RTX 3060",
+            "17-inch Full HD Display"
+        ],
+        "availability": true,
+        "rating": 4.3
+    },
+    {
+        "product_id": 8,
+        "product_title": "Bluetooth Speaker Boom",
+        "product_image": "https://example.com/images/speaker1.jpg",
+        "category": "Accessories",
+        "price": 59.99,
+        "description": "Portable Bluetooth speaker with deep bass and long battery life.",
+        "specification": [
+            "Bluetooth 5.0",
+            "10 Hours Playtime",
+            "Waterproof",
+            "Bass Boost",
+            "360° Sound"
+        ],
+        "availability": false,
+        "rating": 4.4
+    },
+    {
+        "product_id": 9,
+        "product_title": "Smartphone YS Ultra",
+        "product_image": "https://example.com/images/phone2.jpg",
+        "category": "Phones",
+        "price": 799.99,
+        "description": "High-end smartphone with fast processing and excellent camera quality.",
+        "specification": [
+            "6.8-inch AMOLED Display",
+            "256GB Storage",
+            "Quad Camera System",
+            "5G Connectivity",
+            "Wireless Charging"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "product_id": 10,
+        "product_title": "Tablet S Pro",
+        "product_image": "https://example.com/images/tablet1.jpg",
+        "category": "Tablets",
+        "price": 499.99,
+        "description": "Portable tablet with excellent display and long battery life, great for entertainment.",
+        "specification": [
+            "10.5-inch Display",
+            "64GB Storage",
+            "8MP Camera",
+            "Dual Speakers",
+            "Battery up to 12 hours"
+        ],
+        "availability": true,
+        "rating": 4.5
+    },
+    {
+        "product_id": 11,
+        "product_title": "Fitness Tracker Band X",
+        "product_image": "https://example.com/images/fitness1.jpg",
+        "category": "Accessories",
+        "price": 29.99,
+        "description": "Lightweight fitness band with step tracking, heart rate monitoring, and sleep tracking.",
+        "specification": [
+            "Heart Rate Monitor",
+            "Water Resistant",
+            "Sleep Tracking",
+            "Battery up to 10 days"
+        ],
+        "availability": true,
+        "rating": 4.1
+    },
+    {
+        "product_id": 12,
+        "product_title": "MacBook Pro M1",
+        "product_image": "https://example.com/images/macbook2.jpg",
+        "category": "MacBook",
+        "price": 1299.99,
+        "description": "Professional-grade laptop with the M1 chip, ideal for heavy multitasking.",
+        "specification": [
+            "Apple M1 Chip",
+            "16GB RAM",
+            "512GB SSD",
+            "13.3-inch Retina Display",
+            "20-hour Battery Life"
+        ],
+        "availability": true,
+        "rating": 4.9
+    },
+    {
+        "product_id": 13,
+        "product_title": "Digital Camera ProShot",
+        "product_image": "https://example.com/images/camera1.jpg",
+        "category": "Accessories",
+        "price": 349.99,
+        "description": "Professional digital camera with high resolution and multiple lens options.",
+        "specification": [
+            "24MP Camera",
+            "1080p Video Recording",
+            "WiFi Connectivity",
+            "Interchangeable Lens",
+            "Image Stabilization"
+        ],
+        "availability": false,
+        "rating": 4.3
+    },
+    {
+        "product_id": 14,
+        "product_title": "4K Ultra HD TV",
+        "product_image": "https://example.com/images/tv1.jpg",
+        "category": "Electronics",
+        "price": 799.99,
+        "description": "A 50-inch 4K Ultra HD TV with smart features and HDR10 support.",
+        "specification": [
+            "50-inch Display",
+            "4K Ultra HD",
+            "Smart TV",
+            "HDR10",
+            "3 HDMI Ports"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "product_id": 15,
+        "product_title": "Electric Scooter E-Ride",
+        "product_image": "https://example.com/images/scooter1.jpg",
+        "category": "Transportation",
+        "price": 399.99,
+        "description": "Lightweight electric scooter with a 20-mile range and foldable design.",
+        "specification": [
+            "Top Speed 15 mph",
+            "20-mile Range",
+            "Foldable",
+            "Electric Brakes",
+            "LED Lights"
+        ],
+        "availability": true,
+        "rating": 4.5
+    },
+    {
+        "product_id": 16,
+        "product_title": "Noise-Cancelling Headphones",
+        "product_image": "https://example.com/images/headphones1.jpg",
+        "category": "Accessories",
+        "price": 199.99,
+        "description": "Over-ear headphones with active noise cancellation and superior sound quality.",
+        "specification": [
+            "Bluetooth 5.1",
+            "Noise Cancellation"
+        ]
+    }
+]
