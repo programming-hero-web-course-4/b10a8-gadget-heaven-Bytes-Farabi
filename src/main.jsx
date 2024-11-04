@@ -26,6 +26,11 @@ const router = createBrowserRouter([
         loader: ()=> fetch('/public/Categories.json'),
         children: [
           {
+            path: "/",
+            element: <AllDeviceCard></AllDeviceCard>,
+            loader: () => fetch('/public/Products.json')
+          },
+          {
             path: "/category/:category",
             element: <AllDeviceCard></AllDeviceCard>,
             loader: () => fetch('/public/Products.json')
