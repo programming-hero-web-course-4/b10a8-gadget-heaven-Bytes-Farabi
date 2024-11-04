@@ -12,6 +12,7 @@ import Home from './Components/Home.jsx';
 import Statistics from './Components/Statistics.jsx';
 import DashBoard from './Components/DashBoard.jsx';
 import AllDeviceCard from './Components/AllDeviceCard.jsx';
+import ProductDetails from './Components/ProductDetails.jsx';
 
 
 const router = createBrowserRouter([
@@ -44,7 +45,11 @@ const router = createBrowserRouter([
       {
         path: "/dashboard",
         element: <DashBoard></DashBoard>
-      }
+      },
+      {
+        path: "/productdetails/:id",
+        element: <ProductDetails></ProductDetails>,
+      },
     ],
   },
 ]);

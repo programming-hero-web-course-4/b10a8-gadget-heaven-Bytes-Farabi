@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useLoaderData, useParams } from 'react-router-dom';
+import { NavLink, useLoaderData, useParams } from 'react-router-dom';
 
 const AllDeviceCard = () => {
 
@@ -32,7 +32,7 @@ const AllDeviceCard = () => {
                         <p className="text-gray-500">Price: {productData.price}</p>
 
                         <button className="mt-4 px-4 py-2 border border-purple-500 text-purple-500 font-semibold rounded-lg hover:bg-purple-50 transition-colors">
-                            View Details
+                            <NavLink to={`/productdetails/${productData.product_id}`}>View Details</NavLink>
                         </button>
                     </div>
                 </div>
