@@ -44,6 +44,9 @@ const addToStoredWishList = (id) => {
     if (storedWishList.includes(id)) {
         // already exists. do not add it
         toast('already exists in the read list')
+        document.getElementById('wishlistBtn').disabled = true;
+        document.getElementById('wishlistBtn').style.color = 'gray';
+        document.getElementById('wishlistBtn').style.border = '1px solid gray';
     }
     else {
         storedWishList.push(id);

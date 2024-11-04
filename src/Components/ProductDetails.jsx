@@ -64,7 +64,7 @@ const ProductDetails = () => {
                         <button onClick={()=>handleMarkAsRead(product_id)} className="bg-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-purple-700 transition">
                             Add To Cart
                         </button>
-                        <button onClick={()=>handleWishList(product_id)} className="border border-purple-600 text-purple-600 px-4 py-1 rounded-lg font-semibold hover:bg-purple-50 transition text-5xl">
+                        <button id='wishlistBtn' onClick={()=>handleWishList(product_id)} className="border border-purple-600 text-purple-600 px-4 py-1 rounded-lg font-semibold hover:bg-purple-50 transition text-5xl">
                             ♥
                         </button>
                     </div>
