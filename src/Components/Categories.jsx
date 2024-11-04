@@ -6,11 +6,11 @@ import 'react-tabs/style/react-tabs.css';
 const Categories = ({ categories }) => {
 
   return (
-    <div>
+    <div className='mt-10'>
       <div role="tablist" className="tabs tabs-lifted">
         {
           categories.map(category => (
-            <Link role="tab" className="tab" key={category.category} to={`/category/${category.category}`}>{category.category}</Link>
+            <NavLink role="tab" className={({isActive})=>`tab ${isActive? 'tab-active': ''}`} key={category.category} to={`/category/${category.category}`}>{category.category}</NavLink>
           ))
         }
 
