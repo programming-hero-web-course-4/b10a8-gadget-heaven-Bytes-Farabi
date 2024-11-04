@@ -1,12 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import { useLoaderData, useParams } from 'react-router-dom';
+import { useLoaderData, useOutletContext, useParams } from 'react-router-dom';
 import { handleAddToCartList, addToStoredWishList } from './utlis/Utitlity';
 
 const ProductDetails = () => {
+
+
     const data = useLoaderData();
     const { id } = useParams();
 
     const [product, setProduct] = useState();
+
+    const {addToCart} = useOutletContext();
 
     useEffect(() => {
         const singleData = data.find(product => product.product_id == id);
@@ -16,12 +20,12 @@ const ProductDetails = () => {
     if (!product) {
         return <p>Loading...</p>; // Display a loading message while the product is being fetched
     }
-    console.log(product);
-
+    
     const { product_id, product_title, product_image, category, price, description, specification, availability, rating } = product;
 
     const handleAddToCart = (id) =>{
         handleAddToCartList(id)
+        addToCart(product)
     }
 
     const handleWishList = (id) => {
