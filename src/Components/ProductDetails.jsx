@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
-import { addToStoredReadList, addToStoredWishList } from './utlis/Utitlity';
+import { handleAddToCartList, addToStoredWishList } from './utlis/Utitlity';
 
 const ProductDetails = () => {
     const data = useLoaderData();
@@ -20,8 +20,8 @@ const ProductDetails = () => {
 
     const { product_id, product_title, product_image, category, price, description, specification, availability, rating } = product;
 
-    const handleMarkAsRead = (id) =>{
-        addToStoredReadList(id)
+    const handleAddToCart = (id) =>{
+        handleAddToCartList(id)
     }
 
     const handleWishList = (id) => {
@@ -61,7 +61,7 @@ const ProductDetails = () => {
                         </div>
                     </div>
                     <div className="flex gap-4 mt-8">
-                        <button onClick={()=>handleMarkAsRead(product_id)} className="bg-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-purple-700 transition">
+                        <button onClick={()=>handleAddToCart(product_id)} className="bg-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-purple-700 transition">
                             Add To Cart
                         </button>
                         <button id='wishlistBtn' onClick={()=>handleWishList(product_id)} className="border border-purple-600 text-purple-600 px-4 py-1 rounded-lg font-semibold hover:bg-purple-50 transition text-5xl">

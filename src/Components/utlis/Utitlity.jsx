@@ -12,18 +12,18 @@ const getStoredReadList = () => {
     }
 }
 
-const addToStoredReadList = (id) => {
+const handleAddToCartList = (id) => {
     const storedList = getStoredReadList();
     if (storedList.includes(id)) {
         // already exists. do not add it
-        toast('already exists in the read list')
+        toast('already exists in the cart list')
     }
     else {
         storedList.push(id);
         const storedListStr = JSON.stringify(storedList);
         localStorage.setItem('read-list', storedListStr);
         // ideally trigger toast from the component
-        toast('This book is added to your read list.')
+        toast('This book is added to your cart list.')
     }
 }
 
@@ -43,7 +43,7 @@ const addToStoredWishList = (id) => {
     const storedWishList = getStoredWishList();
     if (storedWishList.includes(id)) {
         // already exists. do not add it
-        toast('already exists in the read list')
+        toast('already exists in the cart list')
         document.getElementById('wishlistBtn').disabled = true;
         document.getElementById('wishlistBtn').style.color = 'gray';
         document.getElementById('wishlistBtn').style.border = '1px solid gray';
@@ -56,4 +56,4 @@ const addToStoredWishList = (id) => {
     }
 }
 
-export { addToStoredReadList, addToStoredWishList, getStoredReadList, getStoredWishList }
+export { handleAddToCartList, addToStoredWishList, getStoredReadList, getStoredWishList }
