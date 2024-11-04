@@ -10,7 +10,7 @@ const Categories = ({ categories }) => {
       <div role="tablist" className="tabs tabs-lifted">
         {
           categories.map(category => (
-            <Link role="tab" className="tab" key={category.category} to="/dashboard">{category.category}</Link>
+            <Link role="tab" className="tab" key={category.category} to={`/category/${category.category}`}>{category.category}</Link>
           ))
         }
 

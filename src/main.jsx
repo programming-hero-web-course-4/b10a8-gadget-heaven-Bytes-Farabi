@@ -11,6 +11,7 @@ import Errorpage from './Components/Errorpage.jsx';
 import Home from './Components/Home.jsx';
 import Statistics from './Components/Statistics.jsx';
 import DashBoard from './Components/DashBoard.jsx';
+import AllDeviceCard from './Components/AllDeviceCard.jsx';
 
 
 const router = createBrowserRouter([
@@ -22,7 +23,13 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: ()=> fetch('/public/Categories.json')
+        loader: ()=> fetch('/public/Categories.json'),
+        children: [
+          {
+            path: "/category/:category",
+            element: <AllDeviceCard></AllDeviceCard>,
+          },
+        ],
       },
       {
         path: "/statistics",
