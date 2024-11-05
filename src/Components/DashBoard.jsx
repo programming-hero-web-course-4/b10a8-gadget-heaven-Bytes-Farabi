@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-import { getStoredReadList } from './utlis/Utitlity';
+import { getStoredReadList, getStoredWishList } from './utlis/Utitlity';
 import { AiOutlineClose } from 'react-icons/ai';
 
 const DashBoard = () => {
@@ -17,6 +17,21 @@ const DashBoard = () => {
     setCartItems(updatedCart);
     localStorage.setItem('read-list', JSON.stringify(updatedCart));
   };
+
+const [wishItems, setWishItems] = useState([])
+
+useEffect(()=>{
+  const items = getStoredWishList()
+  setWishItems(items)
+
+}, [])
+
+const handleRemoveFromWishlist = (productId) =>{
+
+  const updateWishlist = wishItems.filter((item) => item.product_id !== productId)
+  setWishItems(updateWishlist)
+  localStorage.setItem('wish-list', JSON.stringify(updateWishlist))
+}
 
   return (
     <section className=" py-16 text-center">
@@ -60,8 +75,25 @@ const DashBoard = () => {
         </TabPanel>
 
         <TabPanel>
-          <h2 className="text-xl">Wishlist Items</h2>
-          <p>wishlist items here...</p>
+        <div className="space-y-4 mt-10 text-left">
+            {wishItems.map(item => (
+              <div key={item.product_id} className="bg-white text-black p-4 rounded-lg flex items-center justify-between shadow-md">
+                <div className="flex items-center">
+                  <div className="w-16 h-16 bg-gray-300 rounded-md mr-4">
+                    <img src={item.product_image || '/placeholder.jpg'} alt={item.product_title} className="w-full h-full object-cover rounded-md" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg">{item.product_title}</h3>
+                    <p className="text-sm text-gray-500">{item.description}</p>
+                    <p className="font-semibold">Price: ${item.price}</p>
+                  </div>
+                </div>
+                <button onClick={() => handleRemoveFromWishlist(item.product_id)} className="text-red-500 hover:text-red-700 transition">
+                  <AiOutlineClose size={24} />
+                </button>
+              </div>
+            ))}
+          </div>
         </TabPanel>
       </Tabs>
     </section>
