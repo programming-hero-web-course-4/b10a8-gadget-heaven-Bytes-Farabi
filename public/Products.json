@@ -38,7 +38,7 @@
         "product_title": "Wireless Earbuds",
         "product_image": "https://i.ibb.co.com/0B4NBNL/wireless-earbuds.jpg",
         "category": "Accessories",
-        "price": 49.99,
+        "price": 69.99,
         "description": "Compact and lightweight earbuds with high-quality sound and noise cancellation.",
         "specification": [
             "Bluetooth 5.2",
@@ -156,7 +156,7 @@
         "product_title": "Fitness Tracker Band X",
         "product_image": "https://i.ibb.co.com/0Q60gLs/Fitness-Tracker-Band-X.jpg",
         "category": "Accessories",
-        "price": 29.99,
+        "price": 80,
         "description": "Lightweight fitness band with step tracking, heart rate monitoring, and sleep tracking.",
         "specification": [
             "Heart Rate Monitor",
