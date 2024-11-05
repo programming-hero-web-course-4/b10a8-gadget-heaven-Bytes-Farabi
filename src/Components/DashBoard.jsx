@@ -19,13 +19,15 @@ const DashBoard = () => {
   };
 
   return (
-    <section className="bg-purple-600 text-white py-16 text-center">
-      <h2 className="text-3xl font-bold mb-4">Dashboard</h2>
-      <p className="text-lg mb-8">
-        Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!
-      </p>
+    <section className=" py-16 text-center">
+      <div className='bg-purple-600 text-white p-10'>
+        <h2 className="text-3xl font-bold mb-4">Dashboard</h2>
+        <p className="text-lg mb-8">
+          Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!
+        </p>
+      </div>
       <Tabs>
-        <TabList className="flex justify-center space-x-4 mb-4">
+        <TabList className="flex justify-center space-x-4 pb-10 bg-purple-600">
           <Tab className="px-6 py-2 font-semibold rounded-full cursor-pointer bg-white text-purple-600 shadow-lg focus:outline-none hover:bg-purple-100 transition duration-300">
             Cart
           </Tab>
@@ -35,8 +37,8 @@ const DashBoard = () => {
         </TabList>
 
         <TabPanel>
-          <h2 className="text-xl mb-4">Cart Items ({cartItems.length})</h2>
-          <div className="space-y-4">
+          {/* <h2 className="text-xl mb-4">Cart Items ({cartItems.length})</h2> */}
+          <div className="space-y-4 mt-10 text-left">
             {cartItems.map(item => (
               <div key={item.product_id} className="bg-white text-black p-4 rounded-lg flex items-center justify-between shadow-md">
                 <div className="flex items-center">
