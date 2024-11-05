@@ -1,34 +1,39 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import { Outlet } from 'react-router-dom';
+import { getStoredReadList } from './utlis/Utitlity';
 
 const Root = () => {
+    const [cart, setCart] = useState([]);
 
-    const [cart, setCart] = useState([])
+    // Load cart from local storage on initial render
+    useEffect(() => {
+        const storedCart = getStoredReadList();
+        setCart(storedCart);
+    }, [cart]);
 
-    const addToCart = (product) =>{
-        setCart((previousCart) => {
-            // Check if the product is already in the cart
-            const productExists = previousCart.find(item => item.product_id === product.product_id);
-            
-            // Only add the product if it doesn’t already exist in the cart
+    // Update local storage whenever the cart changes
+    const addToCart = (product) => {
+        setCart((prevCart) => {
+            const productExists = prevCart.some(item => item.id === product.id);
             if (!productExists) {
-                return [...previousCart, product];
-            } else {
-                return previousCart; // If it exists, return the previous cart as is
+                const updatedCart = [...prevCart, product];
+                localStorage.setItem('read-list', JSON.stringify(updatedCart));
+                return updatedCart;
             }
+            return prevCart;
         });
-    }
+    };
 
     return (
         <div>
             <div className='bg-purple-600 w-full'>
-            <Navbar cartCount={cart.length}></Navbar>
+                <Navbar cartCount={cart.length} />
             </div>
-            <Outlet context={{addToCart}}></Outlet>
+            <Outlet context={{ addToCart }} />
             <div className='mt-40'>
-                <Footer></Footer>
+                <Footer />
             </div>
         </div>
     );

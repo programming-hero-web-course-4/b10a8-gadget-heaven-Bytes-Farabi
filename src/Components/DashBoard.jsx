@@ -1,8 +1,19 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import { getStoredReadList } from './utlis/Utitlity';
 
 const DashBoard = () => {
+
+const [cartItems, setCartItems] = useState([])
+
+useEffect(()=>{
+    const items= getStoredReadList()
+    setCartItems(items)
+}, [])
+
+console.log(cartItems);
+
   return (
     <section className="bg-purple-600 text-white py-16 text-center">
       <h2 className="text-3xl font-bold mb-4">Dashboard</h2>
@@ -20,7 +31,7 @@ const DashBoard = () => {
         </TabList>
 
         <TabPanel>
-          <h2 className="text-xl">Cart Items</h2>
+          <h2 className="text-xl">Cart Items {cartItems.length}</h2>
           <p>cart items here...</p>
         </TabPanel>
         <TabPanel>
