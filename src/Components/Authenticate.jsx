@@ -4,6 +4,7 @@ const Authenticate = () => {
     const [isSignUp, setIsSignUp] = useState(false);
 
     return (
+
       <div className="h-[80vh] rounded-md flex items-center justify-center bg-purple-600">
         <div className="bg-white rounded-2xl shadow-lg p-10 w-full max-w-md">
           <h2 className="text-3xl font-bold text-center text-purple-700 mb-6">
@@ -14,6 +15,7 @@ const Authenticate = () => {
           </p>
   
           <form>
+
             {isSignUp && (
               <div className="mb-4">
                 <label className="block text-gray-700 text-left">Full Name</label>
@@ -24,6 +26,7 @@ const Authenticate = () => {
                 />
               </div>
             )}
+
             <div className="mb-4">
               <label className="block text-gray-700 text-left">Email</label>
               <input
@@ -32,6 +35,7 @@ const Authenticate = () => {
                 placeholder="example@example.com"
               />
             </div>
+
             <div className="mb-4">
               <label className="block text-gray-700 text-left">Password</label>
               <input
@@ -40,6 +44,7 @@ const Authenticate = () => {
                 placeholder="••••••••"
               />
             </div>
+
             {isSignUp && (
               <div className="mb-4">
                 <label className="block text-gray-700 text-left">Confirm Password</label>
@@ -57,6 +62,7 @@ const Authenticate = () => {
             >
               {isSignUp ? 'Sign Up' : 'Sign In'}
             </button>
+
           </form>
   
           <div className="mt-6 text-center">
@@ -70,8 +76,10 @@ const Authenticate = () => {
               </span>
             </p>
           </div>
+          
         </div>
       </div>
+      
     );
 };
 
