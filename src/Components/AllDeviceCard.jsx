@@ -24,9 +24,9 @@ const AllDeviceCard = () => {
     return (
         <div className="grid grid-cols-3 gap-5 mt-10">
             {cards.map(productData => (
-                <div key={productData.product_id} className="max-w-xs rounded-lg shadow-md border border-gray-200 p-4">
+                <div key={productData.product_id} className="max-w-xs rounded-lg shadow-md border border-gray-200 p-4 h-auto">
                     <div className="w-full h-48 bg-gray-300 rounded-md">
-                        <img src={productData.product_image} alt="" />
+                        <img src={productData.product_image} alt="" className='h-full'/>
                     </div>
 
                     <div className="mt-4">

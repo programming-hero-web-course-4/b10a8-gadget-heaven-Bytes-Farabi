@@ -152,23 +152,6 @@
         "rating": 4.6
     },
     {
-        "product_id": 10,
-        "product_title": "Tablet S Pro",
-        "product_image": "https://example.com/images/tablet1.jpg",
-        "category": "Tablets",
-        "price": 499.99,
-        "description": "Portable tablet with excellent display and long battery life, great for entertainment.",
-        "specification": [
-            "10.5-inch Display",
-            "64GB Storage",
-            "8MP Camera",
-            "Dual Speakers",
-            "Battery up to 12 hours"
-        ],
-        "availability": true,
-        "rating": 4.5
-    },
-    {
         "product_id": 11,
         "product_title": "Fitness Tracker Band X",
         "product_image": "https://i.ibb.co.com/0Q60gLs/Fitness-Tracker-Band-X.jpg",
@@ -217,40 +200,6 @@
         ],
         "availability": false,
         "rating": 4.3
-    },
-    {
-        "product_id": 14,
-        "product_title": "4K Ultra HD TV",
-        "product_image": "https://example.com/images/tv1.jpg",
-        "category": "Electronics",
-        "price": 799.99,
-        "description": "A 50-inch 4K Ultra HD TV with smart features and HDR10 support.",
-        "specification": [
-            "50-inch Display",
-            "4K Ultra HD",
-            "Smart TV",
-            "HDR10",
-            "3 HDMI Ports"
-        ],
-        "availability": true,
-        "rating": 4.7
-    },
-    {
-        "product_id": 15,
-        "product_title": "Electric Scooter E-Ride",
-        "product_image": "https://example.com/images/scooter1.jpg",
-        "category": "Transportation",
-        "price": 399.99,
-        "description": "Lightweight electric scooter with a 20-mile range and foldable design.",
-        "specification": [
-            "Top Speed 15 mph",
-            "20-mile Range",
-            "Foldable",
-            "Electric Brakes",
-            "LED Lights"
-        ],
-        "availability": true,
-        "rating": 4.5
     },
     {
         "product_id": 16,
