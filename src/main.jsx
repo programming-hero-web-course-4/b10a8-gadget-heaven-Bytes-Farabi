@@ -16,6 +16,7 @@ import ProductDetails from './Components/ProductDetails.jsx';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Authenticate from './Components/Authenticate.jsx';
+import { HelmetProvider } from 'react-helmet-async';
 
 
 const router = createBrowserRouter([
@@ -27,7 +28,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: ()=> fetch('/public/Categories.json'),
+        loader: () => fetch('/public/Categories.json'),
         children: [
           {
             path: "/",
@@ -65,7 +66,9 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
-    <ToastContainer></ToastContainer>
+    <HelmetProvider>
+      <RouterProvider router={router} />
+      <ToastContainer></ToastContainer>
+    </HelmetProvider>
   </StrictMode>,
 )

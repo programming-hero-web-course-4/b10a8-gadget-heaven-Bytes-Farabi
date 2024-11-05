@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link, NavLink } from 'react-router-dom';
 
 const Navbar = ({cartCount, wishCount}) => {
@@ -12,6 +13,7 @@ const Navbar = ({cartCount, wishCount}) => {
 
     return (
         <div>
+            <Helmet><title>Navbar - Gadget Heaven</title></Helmet>
             <div className="navbar bg-base-100">
                 <div className="navbar-start">
                     <div className="dropdown">
