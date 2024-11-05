@@ -21,7 +21,6 @@ const handleAddToCartList = (product) => {
 
 
 const getStoredWishList = () => {
-    // read-list
     const storedWishListStr = localStorage.getItem('wish-list');
     if (storedWishListStr) {
         const storedWishList = JSON.parse(storedWishListStr);
@@ -32,9 +31,9 @@ const getStoredWishList = () => {
     }
 }
 
-const addToStoredWishList = (id) => {
+const addToStoredWishList = (product) => {
     const storedWishList = getStoredWishList();
-    if (storedWishList.includes(id)) {
+    if (storedWishList.includes(product.product_id)) {
         // already exists. do not add it
         toast('already exists in the cart list')
         document.getElementById('wishlistBtn').disabled = true;
@@ -42,7 +41,7 @@ const addToStoredWishList = (id) => {
         document.getElementById('wishlistBtn').style.border = '1px solid gray';
     }
     else {
-        storedWishList.push(id);
+        storedWishList.push(product);
         const storedWishListStr = JSON.stringify(storedWishList);
         localStorage.setItem('wish-list', storedWishListStr);
         toast('Added to WishList')

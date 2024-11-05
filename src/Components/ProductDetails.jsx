@@ -10,7 +10,7 @@ const ProductDetails = () => {
 
     const [product, setProduct] = useState();
 
-    const {addToCart} = useOutletContext();
+    const {addToCart, addToWishlist} = useOutletContext();
 
     useEffect(() => {
         const singleData = data.find(product => product.product_id == id);
@@ -28,8 +28,10 @@ const ProductDetails = () => {
         addToCart(product)
     }
 
-    const handleWishList = (id) => {
-        addToStoredWishList(id)
+    const handleWishList = (product) => {
+        addToStoredWishList(product)
+
+        addToWishlist(product)
     }
 
     return (
@@ -68,7 +70,7 @@ const ProductDetails = () => {
                         <button onClick={()=>handleAddToCart(product_id)} className="bg-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-purple-700 transition">
                             Add To Cart
                         </button>
-                        <button id='wishlistBtn' onClick={()=>handleWishList(product_id)} className="border border-purple-600 text-purple-600 px-4 py-1 rounded-lg font-semibold hover:bg-purple-50 transition text-5xl">
+                        <button id='wishlistBtn' onClick={()=>handleWishList(product)} className="border border-purple-600 text-purple-600 px-4 py-1 rounded-lg font-semibold hover:bg-purple-50 transition text-5xl">
                             ♥
                         </button>
                     </div>
