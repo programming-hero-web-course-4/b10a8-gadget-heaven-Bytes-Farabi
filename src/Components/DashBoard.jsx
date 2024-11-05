@@ -2,19 +2,21 @@ import React, { useEffect, useState } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import { getStoredReadList } from './utlis/Utitlity';
+import { AiOutlineClose } from 'react-icons/ai';
 
 const DashBoard = () => {
+  const [cartItems, setCartItems] = useState([]);
 
-const [cartItems, setCartItems] = useState([])
+  useEffect(() => {
+    const items = getStoredReadList();
+    setCartItems(items);
+  }, []);
 
-useEffect(()=>{
-    const items= getStoredReadList()
-    setCartItems(items)
-}, [])
-
-
-
-console.log(cartItems);
+  const handleRemoveFromCart = (productId) => {
+    const updatedCart = cartItems.filter(item => item.product_id !== productId);
+    setCartItems(updatedCart);
+    localStorage.setItem('read-list', JSON.stringify(updatedCart));
+  };
 
   return (
     <section className="bg-purple-600 text-white py-16 text-center">
@@ -33,9 +35,28 @@ console.log(cartItems);
         </TabList>
 
         <TabPanel>
-          <h2 className="text-xl">Cart Items {cartItems.length}</h2>
-          <p>cart items here...</p>
+          <h2 className="text-xl mb-4">Cart Items ({cartItems.length})</h2>
+          <div className="space-y-4">
+            {cartItems.map(item => (
+              <div key={item.product_id} className="bg-white text-black p-4 rounded-lg flex items-center justify-between shadow-md">
+                <div className="flex items-center">
+                  <div className="w-16 h-16 bg-gray-300 rounded-md mr-4">
+                    <img src={item.product_image || '/placeholder.jpg'} alt={item.product_title} className="w-full h-full object-cover rounded-md" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg">{item.product_title}</h3>
+                    <p className="text-sm text-gray-500">{item.description}</p>
+                    <p className="font-semibold">Price: ${item.price}</p>
+                  </div>
+                </div>
+                <button onClick={() => handleRemoveFromCart(item.product_id)} className="text-red-500 hover:text-red-700 transition">
+                  <AiOutlineClose size={24} />
+                </button>
+              </div>
+            ))}
+          </div>
         </TabPanel>
+
         <TabPanel>
           <h2 className="text-xl">Wishlist Items</h2>
           <p>wishlist items here...</p>
