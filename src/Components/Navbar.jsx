@@ -7,6 +7,7 @@ const Navbar = ({cartCount}) => {
         <NavLink to={"/"} className="px-6 py-2 bg-gray-900 text-white rounded-lg shadow-md font-medium transition duration-200 ease-in-out hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 active:scale-95">Home</NavLink>
         <NavLink to={"/statistics"} className="px-6 py-2 bg-gray-900 text-white rounded-lg shadow-md font-medium transition duration-200 ease-in-out hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 active:scale-95">Statistics</NavLink>
         <NavLink to={"/dashboard"} className="px-6 py-2 bg-gray-900 text-white rounded-lg shadow-md font-medium transition duration-200 ease-in-out hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 active:scale-95">Dashboard</NavLink>
+        <NavLink to={"/authenticate"} className="px-6 py-2 bg-gray-900 text-white rounded-lg shadow-md font-medium transition duration-200 ease-in-out hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 active:scale-95">Reg/Login</NavLink>
     </div>
 
     return (

@@ -15,6 +15,7 @@ import AllDeviceCard from './Components/AllDeviceCard.jsx';
 import ProductDetails from './Components/ProductDetails.jsx';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Authenticate from './Components/Authenticate.jsx';
 
 
 const router = createBrowserRouter([
@@ -53,6 +54,10 @@ const router = createBrowserRouter([
         element: <ProductDetails></ProductDetails>,
         loader: () => fetch('/public/Products.json')
       },
+      {
+        path: "/authenticate",
+        element: <Authenticate></Authenticate>
+      }
     ],
   },
 ]);
