@@ -43,6 +43,11 @@ const DashBoard = () => {
     setCartItems(sorted)
   }
 
+  const showModal = () =>{
+    const modal = document.getElementById('my_modal_1')
+    modal.showModal()
+  }
+
   return (
 
     <div>
@@ -80,7 +85,7 @@ const DashBoard = () => {
                   Sort by Price <span className="ml-1">⇅</span>
                 </button>
 
-                <button className="px-4 py-1 bg-purple-500 text-white rounded-full font-semibold hover:bg-purple-600 transition">
+                <button onClick={()=>showModal()} className="px-4 py-1 bg-purple-500 text-white rounded-full font-semibold hover:bg-purple-600 transition">
                   Purchase
                 </button>
               </div>
@@ -134,6 +139,28 @@ const DashBoard = () => {
           </TabPanel>
         </Tabs>
       </section>
+      {/* Open the modal using document.getElementById('ID').showModal() method */}
+      <dialog id="my_modal_1" className="modal">
+  <div className="modal-box text-center">
+
+    <div className="text-green-500 text-4xl mb-2 flex justify-center">
+      <img src="/assets/Group.png" alt="" />
+    </div>
+
+    <h3 className="font-bold text-lg mb-2">Payment Successfully</h3>
+
+    <p className="text-gray-500">Thanks for purchasing.</p>
+
+    <p className="text-gray-800 font-medium mb-6">Total: {TotalCost()}</p>
+
+    <div className="modal-action">
+      <form method="dialog">
+        <button className="w-full bg-gray-200 hover:bg-gray-300 text-gray-700 font-semibold py-2 px-4 rounded-lg">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+
     </div>
 
   );
