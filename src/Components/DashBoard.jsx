@@ -18,20 +18,26 @@ const DashBoard = () => {
     localStorage.setItem('read-list', JSON.stringify(updatedCart));
   };
 
-const [wishItems, setWishItems] = useState([])
+  const [wishItems, setWishItems] = useState([])
 
-useEffect(()=>{
-  const items = getStoredWishList()
-  setWishItems(items)
+  useEffect(() => {
+    const items = getStoredWishList()
+    setWishItems(items)
 
-}, [])
+  }, [])
 
-const handleRemoveFromWishlist = (productId) =>{
+  const handleRemoveFromWishlist = (productId) => {
 
-  const updateWishlist = wishItems.filter((item) => item.product_id !== productId)
-  setWishItems(updateWishlist)
-  localStorage.setItem('wish-list', JSON.stringify(updateWishlist))
-}
+    const updateWishlist = wishItems.filter((item) => item.product_id !== productId)
+    setWishItems(updateWishlist)
+    localStorage.setItem('wish-list', JSON.stringify(updateWishlist))
+  }
+
+  const TotalCost = () => {
+    return cartItems.reduce((total, item) => total + (item.price || 0), 0).toFixed(2);
+  };
+
+  
 
   return (
     <section className=" py-16 text-center">
@@ -50,6 +56,26 @@ const handleRemoveFromWishlist = (productId) =>{
             Wishlist
           </Tab>
         </TabList>
+
+        <div>
+          <div className="flex items-center justify-between bg-white p-4 shadow rounded-md mt-7">
+            <h3 className="text-lg font-semibold text-gray-800">Cart</h3>
+
+            <div className="flex items-center space-x-4">
+              <p className="text-gray-600 font-medium">
+                Total cost: <span className="font-semibold text-gray-800">${TotalCost()}</span>
+              </p>
+
+              <button className="px-4 py-1 border border-purple-500 text-purple-500 rounded-full font-semibold hover:bg-purple-100 transition">
+                Sort by Price <span className="ml-1">⇅</span>
+              </button>
+
+              <button className="px-4 py-1 bg-purple-500 text-white rounded-full font-semibold hover:bg-purple-600 transition">
+                Purchase
+              </button>
+            </div>
+          </div>
+        </div>
 
         <TabPanel>
           {/* <h2 className="text-xl mb-4">Cart Items ({cartItems.length})</h2> */}
@@ -70,12 +96,13 @@ const handleRemoveFromWishlist = (productId) =>{
                   <AiOutlineClose size={24} />
                 </button>
               </div>
+              
             ))}
           </div>
         </TabPanel>
 
         <TabPanel>
-        <div className="space-y-4 mt-10 text-left">
+          <div className="space-y-4 mt-10 text-left">
             {wishItems.map(item => (
               <div key={item.product_id} className="bg-white text-black p-4 rounded-lg flex items-center justify-between shadow-md">
                 <div className="flex items-center">
