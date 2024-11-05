@@ -37,7 +37,10 @@ const DashBoard = () => {
     return cartItems.reduce((total, item) => total + (item.price || 0), 0).toFixed(2);
   };
 
-  
+  const handleSortByPrice = () =>{
+    const sorted = [...cartItems].sort((a, b) => b.price - a.price)
+    setCartItems(sorted)
+  }
 
   return (
     <section className=" py-16 text-center">
@@ -66,7 +69,7 @@ const DashBoard = () => {
                 Total cost: <span className="font-semibold text-gray-800">${TotalCost()}</span>
               </p>
 
-              <button className="px-4 py-1 border border-purple-500 text-purple-500 rounded-full font-semibold hover:bg-purple-100 transition">
+              <button onClick={()=> handleSortByPrice()} className="px-4 py-1 border border-purple-500 text-purple-500 rounded-full font-semibold hover:bg-purple-100 transition">
                 Sort by Price <span className="ml-1">⇅</span>
               </button>
 
