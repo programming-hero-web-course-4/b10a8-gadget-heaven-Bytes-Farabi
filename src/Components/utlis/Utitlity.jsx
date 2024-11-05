@@ -8,11 +8,11 @@ const getStoredReadList = () => {
 const handleAddToCartList = (product) => {
     const storedList = getStoredReadList();
 
-    // Check if the product is already in the cart list by comparing product IDs
     if (storedList.some(item => item.product_id === product.product_id)) {
         toast('This product is already in the cart');
-    } else {
-        // Add the full product object to the cart list
+    } 
+    else 
+    {
         storedList.push(product);
         localStorage.setItem('read-list', JSON.stringify(storedList));
         toast('This product has been added to your cart');
@@ -33,18 +33,15 @@ const getStoredWishList = () => {
 
 const addToStoredWishList = (product) => {
     const storedWishList = getStoredWishList();
-    if (storedWishList.includes(product.product_id)) {
-        // already exists. do not add it
-        toast('already exists in the cart list')
+    if (storedWishList.some(item => item.product_id === product.product_id)) {
+        toast('This product is already in the wishlist');
         document.getElementById('wishlistBtn').disabled = true;
-        document.getElementById('wishlistBtn').style.color = 'gray';
-        document.getElementById('wishlistBtn').style.border = '1px solid gray';
-    }
-    else {
+        return; 
+    } else {
         storedWishList.push(product);
         const storedWishListStr = JSON.stringify(storedWishList);
         localStorage.setItem('wish-list', storedWishListStr);
-        toast('Added to WishList')
+        toast('Added to Wishlist');
     }
 }
 
