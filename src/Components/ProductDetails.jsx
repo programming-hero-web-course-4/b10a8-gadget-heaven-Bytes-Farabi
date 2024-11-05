@@ -24,7 +24,7 @@ const ProductDetails = () => {
     const { product_id, product_title, product_image, category, price, description, specification, availability, rating } = product;
 
     const handleAddToCart = (id) =>{
-        handleAddToCartList(id)
+        handleAddToCartList(product)
         addToCart(product)
     }
 

@@ -12,6 +12,8 @@ useEffect(()=>{
     setCartItems(items)
 }, [])
 
+
+
 console.log(cartItems);
 
   return (
