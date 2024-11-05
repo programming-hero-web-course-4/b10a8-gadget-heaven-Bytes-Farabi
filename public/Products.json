@@ -263,5 +263,90 @@
             "Bluetooth 5.1",
             "Noise Cancellation"
         ]
+    },
+    {
+        "product_id": 17,
+        "product_title": "Business Elite",
+        "product_image": "https://example.com/images/laptop3.jpg",
+        "category": "Laptops",
+        "price": 1299.99,
+        "description": "Professional laptop with robust security features for business use.",
+        "specification": [
+            "Intel i5 Processor",
+            "16GB RAM",
+            "512GB SSD",
+            "14-inch Full HD Display",
+            "Fingerprint Reader"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "product_id": 18,
+        "product_title": "Convertible Flex 360",
+        "product_image": "https://example.com/images/laptop4.jpg",
+        "category": "Laptops",
+        "price": 1099.99,
+        "description": "2-in-1 convertible laptop that adapts to your needs.",
+        "specification": [
+            "Intel i7 Processor",
+            "16GB RAM",
+            "256GB SSD",
+            "13.3-inch Touchscreen Display",
+            "360° Hinge"
+        ],
+        "availability": true,
+        "rating": 4.4
+    },
+    {
+        "product_id": 19,
+        "product_title": "Student Essential",
+        "product_image": "https://example.com/images/laptop5.jpg",
+        "category": "Laptops",
+        "price": 499.99,
+        "description": "Affordable laptop with all essential features for students.",
+        "specification": [
+            "Intel i3 Processor",
+            "8GB RAM",
+            "256GB SSD",
+            "15.6-inch HD Display",
+            "Lightweight Design"
+        ],
+        "availability": true,
+        "rating": 4.2
+    },
+    {
+        "product_id": 20,
+        "product_title": "Creative Studio Pro",
+        "product_image": "https://example.com/images/laptop6.jpg",
+        "category": "Laptops",
+        "price": 1599.99,
+        "description": "High-end laptop built for designers and creative professionals.",
+        "specification": [
+            "Intel i9 Processor",
+            "32GB RAM",
+            "1TB SSD",
+            "15.6-inch 4K UHD Display",
+            "Dedicated Graphics Card"
+        ],
+        "availability": true,
+        "rating": 4.9
+    },
+    {
+        "product_id": 21,
+        "product_title": "Traveler's Choice",
+        "product_image": "https://example.com/images/laptop7.jpg",
+        "category": "Laptops",
+        "price": 899.99,
+        "description": "Compact and durable laptop designed for travel enthusiasts.",
+        "specification": [
+            "Intel i5 Processor",
+            "8GB RAM",
+            "256GB SSD",
+            "13.3-inch Full HD Display",
+            "Long Battery Life"
+        ],
+        "availability": true,
+        "rating": 4.3
     }
 ]
