@@ -7,13 +7,11 @@ import { getStoredReadList } from './utlis/Utitlity';
 const Root = () => {
     const [cart, setCart] = useState([]);
 
-    // Load cart from local storage on initial render
     useEffect(() => {
         const storedCart = getStoredReadList();
         setCart(storedCart);
-    }, [cart]);
+    }, []);
 
-    // Update local storage whenever the cart changes
     const addToCart = (product) => {
         setCart((prevCart) => {
             const productExists = prevCart.some(item => item.id === product.id);
