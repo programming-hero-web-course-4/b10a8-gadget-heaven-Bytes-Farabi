@@ -8,7 +8,7 @@ Check out the live website here: [Live Website Link](https://your-live-website-l
 
 ## Requirement Document
 
-You can find the project requirement document here: [Requirement Document Link](https://your-requirement-document-link.com)
+https://drive.google.com/file/d/1l0ab3wbGqVlQeZKu-HnDHtPSrTSabLeD/view?usp=sharing
 
 ## React Fundamentals Used
 
