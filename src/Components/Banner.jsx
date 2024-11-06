@@ -20,7 +20,7 @@ const Banner = () => {
             <section className='absolute-section absolute -mt-36 '>
                 <div className='border-2 border-white ml-[36vh] rounded-lg'>
                     <div className='w-[100%] mx-auto flex p-3'>
-                        <img src="/public/assets/banner.jpg" alt="banner" className='h-[35vh] w-full] rounded-lg'/>
+                        <img src="/assets/banner.jpg" alt="banner" className='h-[35vh] w-full] rounded-lg'/>
                     </div>
                 </div>
             </section>

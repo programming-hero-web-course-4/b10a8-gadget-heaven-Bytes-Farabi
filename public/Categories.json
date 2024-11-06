@@ -1,10 +1,5 @@
 [
     {
-      "id": 1,
-      "category": "All Product",
-      "slug": "all-product"
-    },
-    {
       "id": 2,
       "category": "Laptops",
       "slug": "laptops"
