@@ -1,20 +1,32 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 
 const Navbar = ({cartCount, wishCount}) => {
 
+    const location = useLocation()
+
+    const navbarStyle = location.pathname === '/' ? 'bg-purple-600' : 'bg-black';
+
     const links = <div className='flex gap-5'>
-        <NavLink to={"/"} className="px-6 py-2 bg-gray-900 text-white rounded-lg shadow-md font-medium transition duration-200 ease-in-out hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 active:scale-95">Home</NavLink>
-        <NavLink to={"/statistics"} className="px-6 py-2 bg-gray-900 text-white rounded-lg shadow-md font-medium transition duration-200 ease-in-out hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 active:scale-95">Statistics</NavLink>
-        <NavLink to={"/dashboard"} className="px-6 py-2 bg-gray-900 text-white rounded-lg shadow-md font-medium transition duration-200 ease-in-out hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 active:scale-95">Dashboard</NavLink>
-        <NavLink to={"/authenticate"} className="px-6 py-2 bg-gray-900 text-white rounded-lg shadow-md font-medium transition duration-200 ease-in-out hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 active:scale-95">Reg/Login</NavLink>
+        <NavLink to={"/"} className={({ isActive }) =>
+                    `px-6 py-2 bg-gray-900 text-white rounded-lg shadow-md font-medium transition duration-200 ease-in-out hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${isActive ? 'scale-95 bg-blue-600' : ''}`
+                }>Home</NavLink>
+        <NavLink to={"/statistics"} className={({ isActive }) =>
+                    `px-6 py-2 bg-gray-900 text-white rounded-lg shadow-md font-medium transition duration-200 ease-in-out hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${isActive ? 'scale-95 bg-blue-600' : ''}`
+                }>Statistics</NavLink>
+        <NavLink to={"/dashboard"} className={({ isActive }) =>
+                    `px-6 py-2 bg-gray-900 text-white rounded-lg shadow-md font-medium transition duration-200 ease-in-out hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${isActive ? 'scale-95 bg-blue-600' : ''}`
+                }>Dashboard</NavLink>
+        <NavLink to={"/authenticate"} className={({ isActive }) =>
+                    `px-6 py-2 bg-gray-900 text-white rounded-lg shadow-md font-medium transition duration-200 ease-in-out hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${isActive ? 'scale-95 bg-blue-600' : ''}`
+                }>Reg/Login</NavLink>
     </div>
 
     return (
         <div>
             <Helmet><title>Navbar - Gadget Heaven</title></Helmet>
-            <div className="navbar bg-base-100">
+            <div className={`navbar rounded-md lg:px-10 lg:pt-5 ${navbarStyle}`}>
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -33,12 +45,12 @@ const Navbar = ({cartCount, wishCount}) => {
                         </div>
                         <ul
                             tabIndex={0}
-                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                            className="menu menu-sm dropdown-content rounded-box z-[1] mt-3 w-52 p-2 block">
                             {links}
                         </ul>
                     </div>
                     {/* <a className="btn btn-ghost text-xl">Gadget Heaven</a> */}
-                    <Link className=" font-bold text-xl">Gadget Heaven</Link>
+                    <Link className=" font-bold text-xl text-white">Gadget Heaven</Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">

@@ -45,11 +45,11 @@ const Root = () => {
 
     return (
         <div>
-            <div className='bg-purple-600 w-full'>
+            <div className='bg-purple-600 w-full rounded-t-lg'>
                 <Navbar cartCount={cart.length} wishCount={wishlist.length} />
             </div>
             <Outlet context={{ addToCart, addToWishlist}} />
-            <div className='mt-40'>
+            <div className='mt-10'>
                 <Footer />
             </div>
         </div>
